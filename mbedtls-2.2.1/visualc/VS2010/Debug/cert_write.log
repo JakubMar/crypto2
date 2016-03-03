@@ -1,0 +1,12 @@
+﻿Build started 29. 2. 2016 10:49:52.
+     1>Project "C:\Users\Kubo\Downloads\mbedtls-2.2.1-apache\mbedtls-2.2.1\visualc\VS2010\cert_write.vcxproj" on node 2 (Build target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (aescrypt2.vcxproj, benchmark.vcxproj, cert_app.vcxproj, cert_req.vcxproj, crl_app.vcxproj, crypt_and_hash.vcxproj, dh_client.vcxproj, dh_genprime.vcxproj, dh_server.vcxproj, dtls_client.vcxproj, dtls_server.vcxproj, ecdsa.vcxproj, generic_sum.vcxproj, gen_entropy.vcxproj, gen_key.vcxproj, gen_random_ctr_drbg.vcxproj, gen_random_havege.vcxproj, hello.vcxproj, key_app.vcxproj, key_app_writer.vcxproj, mbedTLS.vcxproj, mini_client.vcxproj, mpi_demo.vcxproj, pem2der.vcxproj, pk_decrypt.vcxproj, pk_encrypt.vcxproj, pk_sign.vcxproj, pk_verify.vcxproj, rsa_decrypt.vcxproj, rsa_encrypt.vcxproj, rsa_genkey.vcxproj, rsa_sign.vcxproj, rsa_sign_pss.vcxproj, rsa_verify.vcxproj, rsa_verify_pss.vcxproj, selftest.vcxproj, ssl_cert_test.vcxproj, ssl_client1.vcxproj, ssl_client2.vcxproj, ssl_fork_server.vcxproj, ssl_mail_client.vcxproj, ssl_server.vcxproj, ssl_server2.vcxproj, strerror.vcxproj, udp_proxy.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I../../include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:prompt ..\..\programs\x509\cert_write.c
+         cert_write.c
+     1>c:\users\kubo\downloads\mbedtls-2.2.1-apache\mbedtls-2.2.1\programs\x509\cert_write.c : fatal error C1041: cannot open program database 'C:\Users\Kubo\Downloads\mbedtls-2.2.1-apache\mbedtls-2.2.1\visualc\VS2010\Debug\vc140.pdb'; if multiple CL.EXE write to the same .PDB file, please use /FS
+     1>Done Building Project "C:\Users\Kubo\Downloads\mbedtls-2.2.1-apache\mbedtls-2.2.1\visualc\VS2010\cert_write.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.55

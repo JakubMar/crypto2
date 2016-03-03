@@ -1,0 +1,2 @@
+#TargetFrameworkVersion=v4.0:PlatformToolSet=v140:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit
+Debug|Win32|C:\Users\Kubo\Downloads\mbedtls-2.2.1-apache\mbedtls-2.2.1\visualc\VS2010\|

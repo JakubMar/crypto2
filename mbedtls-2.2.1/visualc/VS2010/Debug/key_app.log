@@ -1,0 +1,12 @@
+﻿Build started 29. 2. 2016 10:49:05.
+     1>Project "C:\Users\Kubo\Downloads\mbedtls-2.2.1-apache\mbedtls-2.2.1\visualc\VS2010\key_app.vcxproj" on node 2 (Build target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (aescrypt2.vcxproj, crypt_and_hash.vcxproj, dh_client.vcxproj, dh_genprime.vcxproj, dh_server.vcxproj, ecdsa.vcxproj, generic_sum.vcxproj, gen_key.vcxproj, hello.vcxproj, mbedTLS.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I../../include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:prompt ..\..\programs\pkey\key_app.c
+         key_app.c
+     1>c:\users\kubo\downloads\mbedtls-2.2.1-apache\mbedtls-2.2.1\programs\pkey\key_app.c : fatal error C1041: cannot open program database 'C:\Users\Kubo\Downloads\mbedtls-2.2.1-apache\mbedtls-2.2.1\visualc\VS2010\Debug\vc140.pdb'; if multiple CL.EXE write to the same .PDB file, please use /FS
+     1>Done Building Project "C:\Users\Kubo\Downloads\mbedtls-2.2.1-apache\mbedtls-2.2.1\visualc\VS2010\key_app.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.50

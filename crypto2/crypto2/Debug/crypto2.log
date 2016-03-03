@@ -1,4 +1,4 @@
-﻿Build started 3. 3. 2016 16:05:04.
+﻿Build started 3. 3. 2016 16:49:50.
      1>Project "C:\Users\Kubo\Documents\pb173\crypto2\crypto2\crypto2\crypto2.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Source.cpp
@@ -10,4 +10,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:04.61
+Time Elapsed 00:00:08.94

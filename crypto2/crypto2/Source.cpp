@@ -62,17 +62,23 @@ int decryption(unsigned char* key, unsigned char* iv, ifstream& in_file, size_t 
 	mbedtls_cipher_set_iv(&crypt_ctx, iv, 16);
 	mbedtls_cipher_setkey(&crypt_ctx, key, 128, MBEDTLS_DECRYPT);
 	
-
+	size_t len;
 	for (size_t i = 0; i < in_len-65; i += block) {
-		int len = (((in_len-65) - i) > block ? block : (int)((in_len-65) - i));
+		len = (((in_len-65) - i) > block ? block : (in_len-65) - i);
+		cout << len << endl;
 		in_file.read((char*)input, len);
 		mbedtls_sha512_update(&hash_ctx, input, len);
-		mbedtls_cipher_update(&crypt_ctx, input, len, output, (size_t*)&len);
+		mbedtls_cipher_update(&crypt_ctx, input, len, output, &len);
 		out_file.write((char*)output, len);
+		cout << len << endl;
 	}
 
 	mbedtls_sha512_finish(&hash_ctx, hash_output);
 	in_file.read((char*)given_hash, 64);
+	cout.write((char*)given_hash, 64);
+	cout << endl;
+	cout.write((char*)given_hash, 64);
+	cout << endl;
 	if (!memcmp(hash_output, given_hash, 64)) {
 		cout << "hash ok" << endl;
 	}

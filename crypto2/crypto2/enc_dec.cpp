@@ -68,8 +68,8 @@ int decryption(unsigned char* key, unsigned char* iv, ifstream& in_file, size_t 
 		len = (((in_len - 65) - i) > block ? block : (in_len - 65) - i);
 		in_file.read((char*)input, len);
 		mbedtls_sha512_update(&hash_ctx, input, len);
-		mbedtls_cipher_update(&crypt_ctx, input, len, output, &len);
-		out_file.write((char*)output, len);
+		mbedtls_cipher_update(&crypt_ctx, input, len, output, &out_block);
+		out_file.write((char*)output, out_block);
 	}
 
 	mbedtls_sha512_finish(&hash_ctx, hash_output);

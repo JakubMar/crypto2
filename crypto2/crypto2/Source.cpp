@@ -1,6 +1,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <cstring>
 #include "enc_dec.h"
 using namespace std;
 

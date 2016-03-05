@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <cstring>
 #include "mbedtls/aes.h"
 #include "mbedtls/sha512.h"
 #include "mbedtls/cipher.h"

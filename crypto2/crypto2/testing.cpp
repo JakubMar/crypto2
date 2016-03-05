@@ -1,10 +1,6 @@
-/** 
- * @file main.cpp
- * @author Martin Ukrop
- * @licence MIT Licence
- */
 
 
+#include "enc_dec.h"
 
 // Tell CATCH to define its main function here
 #define CATCH_CONFIG_MAIN

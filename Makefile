@@ -3,7 +3,7 @@
 
 # Variable settings
 CXXFLAGS=-Wall -Wextra 
-SOURCES_GEN=crypto2/crypto2/Source.cpp
+SOURCES_GEN=crypto2/crypto2/enc_dec.cpp
 # Source and object lists for main program
 SOURCES_MAIN=$(SOURCES_GEN) crypto2/crypto2/Source.cpp
 OBJECTS_MAIN=$(SOURCES_MAIN:.cpp=.o)

@@ -121,7 +121,6 @@
   <ItemGroup>
     <ClCompile Include="enc_dec.cpp" />
     <ClCompile Include="Source.cpp" />
-    <ClCompile Include="testing.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="enc_dec.h" />

@@ -170,7 +170,7 @@ int decryption2(unsigned char* key, unsigned char* iv, FILE* in_file, FILE* out_
 	size_t in_len = static_cast<size_t>(ftell(in_file));
 	rewind(in_file);
 
-	if ((in_len < 64)) {// || (in_len % block != 0)) {
+	if ((in_len < 64) || (in_len % block != 0)) {
 		cerr << "not suitable length of input file" << endl;
 		return 1;
 	}
@@ -212,19 +212,7 @@ int decryption2(unsigned char* key, unsigned char* iv, FILE* in_file, FILE* out_
 	}
 	else {
 		cerr << "different hash" << endl;
-		//return 2;
+		return 2;
 	}
-	bool correct = 1;
-	for (int i = 0; i < 64; ++i) {
-		if (given_hash[i] != hash_output[i]) {
-			correct = 0;
-			break;
-		}
-	}
-	if (correct)
-		cout << "cycle hash ok" << endl;
-	else
-		cout << "cycle hash nok" << endl;
-		
 	return 0;
 }

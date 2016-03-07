@@ -6,6 +6,7 @@
 #include "enc_dec.h"
 using namespace std;
 
+//#define _CRT_SECURE_NO_WARNINGS
 
 int main(int argc, char* argv[]){
 	/* parsing arguments */
@@ -27,12 +28,12 @@ int main(int argc, char* argv[]){
 	}
 
 	FILE* infile, *outfile; 
-	if (fopen_s(&infile, argv[2], "rb")){
+	if ((infile = fopen(argv[2], "rb")) == NULL){
 		cerr << "Can't open file: " << argv[2] << endl;
 		return 3;
 	}
 
-	if (fopen_s(&outfile, argv[3], "w")){
+	if ((outfile = fopen(argv[3], "w")) == NULL){
 		cerr << "Cant open file: " << argv[3] << endl;
 		return 3;
 	}

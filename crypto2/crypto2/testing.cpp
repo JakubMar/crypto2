@@ -13,9 +13,9 @@ TEST_CASE("Enc/dec testing", "[basic]") {
 	unsigned char str2[48];
 	unsigned char str3[48];
 
-	fopen_s(&init, "inputfilewithverylongname.txt", "wb+");
-	fopen_s(&output, "outputfilewithverylongname.txt", "wb+");
-	fopen_s(&middle, "middleencryptedfilewithextremelylongname.txt", "wb+");
+	init = fopen("input_test.txt", "wb+");
+	output = fopen("output_test.txt", "wb+");
+	middle = fopen("encrypted_test.txt", "wb+");
 	fwrite(str, sizeof(unsigned char), 33, init);
 	rewind(init);
 
@@ -43,9 +43,9 @@ TEST_CASE("Enc/dec testing - different key, input length", "[basic]") {
 	unsigned char str2[16];
 	unsigned char str3[16];
 
-	fopen_s(&init, "inputfilewithverylongname.txt", "wb+");
-	fopen_s(&output, "outputfilewithverylongname.txt", "wb+");
-	fopen_s(&middle, "middleencryptedfilewithextremelylongname.txt", "wb+");
+	init = fopen("input_test.txt", "wb+");
+	output = fopen("output_test.txt", "wb+");
+	middle = fopen("encrypted_test.txt", "wb+");
 	fwrite(str, sizeof(unsigned char), 6, init);
 	rewind(init);
 
@@ -73,9 +73,9 @@ TEST_CASE("wrong decryption key", "[key]") {
 	unsigned char str2[16];
 	unsigned char str3[16];
 
-	fopen_s(&init, "inputfilewithverylongname.txt", "wb+");
-	fopen_s(&output, "outputname.txt", "wb+");
-	fopen_s(&middle, "middleencryptedfilewithextremelylongname.txt", "wb+");
+	init = fopen("input_test.txt", "wb+");
+	output = fopen("output_test.txt", "wb+");
+	middle = fopen("encrypted_test.txt", "wb+");
 	fwrite(str, sizeof(unsigned char), 10, init);
 	rewind(init);
 
@@ -104,9 +104,9 @@ TEST_CASE("test vector encryption", "[known ciphertext]") {
 	unsigned char str2[16] = { 0x3f, 0xf1, 0xca, 0xa1, 0x68, 0x1f, 0xac, 0x09, 0x12, 0x0e, 0xca, 0x30, 0x75, 0x86, 0xe1, 0xa7};
 	unsigned char str3[16];
 		
-	fopen_s(&init, "inputfilewithverylongname.txt", "wb+");
-	fopen_s(&output, "outputfilewithverylongname.txt", "wb+");
-	fopen_s(&middle, "middleencryptedfilewithextremelylongname.txt", "wb+");
+	init = fopen("input_test.txt", "wb+");
+	output = fopen("output_test.txt", "wb+");
+	middle = fopen("encrypted_test.txt", "wb+");
 	fwrite(str, sizeof(unsigned char), 16, init);
 	rewind(init);
 
@@ -132,9 +132,9 @@ TEST_CASE("Corrupted encrypted file", "[change in ciphertext]") {
 	unsigned char str2[96];
 	unsigned char str3[32];
 
-	fopen_s(&init, "inputfilewithverylongname.txt", "wb+");
-	fopen_s(&output, "outputfilewithverylongname.txt", "wb+");
-	fopen_s(&middle, "middleencryptedfilewithextremelylongname.txt", "wb+");
+	init = fopen("input_test.txt", "wb+");
+	output = fopen("output_test.txt", "wb+");
+	middle = fopen("encrypted_test.txt", "wb+");
 	fwrite(str, sizeof(unsigned char), 26, init);
 	rewind(init);
 

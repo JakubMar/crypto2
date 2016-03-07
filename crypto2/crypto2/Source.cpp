@@ -6,12 +6,12 @@
 #include "enc_dec.h"
 using namespace std;
 
-//#define _CRT_SECURE_NO_WARNINGS
+
 
 int main(int argc, char* argv[]){
 	/* parsing arguments */
-	if (argc != 4) {
-		cerr << "Wrong number of parameters: <-e encryption | -d decryption> <input_file> <output_file>" << endl;
+	if (argc != 5) {
+		cerr << "Wrong number of parameters: <-e encryption | -d decryption> <input_file> <output_file> <key>" << endl;
 		return 1;
 	}
 
@@ -38,14 +38,21 @@ int main(int argc, char* argv[]){
 		return 3;
 	}
 
+	unsigned char key[16];
 	unsigned char iv[16] = { 0x6c, 0x70, 0xed, 0x50, 0xfd, 0xed, 0xb9, 0xda, 0x51, 0xa3, 0x40, 0xbd, 0x92, 0x9d, 0x38, 0x9d };
-	unsigned char key[16] = { 0xa5, 0x84, 0x99, 0x8d, 0x0d, 0xbd, 0xb1, 0x54, 0xbb, 0xc5, 0x4f, 0xed, 0x86, 0x9a, 0x66, 0x11 };
+	if (strlen(argv[4]) != 16) {
+		cerr << "key-length is not 16" << endl;
+		return 4;
+	}
+	else memcpy(key, argv[4], 16);
+
 
 	/* encryption */
 	if (!mode) {
 		if (encryption(key, iv, infile, outfile)) {
 			cerr << "Encryption error" << endl;
 		}
+		else cout << "Encryption complete" << endl;
 	}
 
 	/*decryption*/
@@ -53,14 +60,10 @@ int main(int argc, char* argv[]){
 		if (decryption(key, iv, infile, outfile)) {
 			cerr << "Decryption error" << endl;
 		}
+		else cout << "Decryption complete" << endl;
 	}
-
 	fclose(infile);
 	fclose(outfile);
-
 	return 0;
-
-
-return 0;
 }
 
